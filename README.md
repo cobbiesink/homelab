@@ -8,6 +8,12 @@ was built, why it was built that way, and what turned out to be wrong.
 Everything here is running in production, at home, and used daily. Numbers in this document
 come from the live system, not from memory.
 
+![The wall panel](docs/images/01-wall-board.png)
+
+*The wall tablet. Clock and weather on the left, the next thing that will happen on the right,
+four status beads across the middle, and the rooms along the bottom. Every screenshot here is
+in demo mode: room names, figures, events and locations are substituted.*
+
 ---
 
 ## What it is
@@ -77,6 +83,11 @@ deleted, guide followed to the letter. It found that the old restore script had 
 since the provider migration, aborting on a missing file from the previous setup. That is the
 kind of thing you only discover by rehearsing.
 
+![Home lab page](docs/images/05-homelab-web.png)
+
+*Both copies reported side by side, with the age of the last run, snapshot count and free
+space. The green bar becomes a warning if the local copy goes 48 hours without running.*
+
 [Full write-up](docs/backups.md)
 
 ### The wall panel cannot overflow, by construction
@@ -97,6 +108,19 @@ There was also a cause no amount of CSS would have fixed: the Android WebView mu
 font size by the system font scale, so a device with larger text set silently broke a layout
 that measured perfectly on a desktop. Measured: clean at 100%, four cards clipped at 115%,
 five at 130%.
+
+<table>
+<tr>
+<td width="50%"><img src="docs/images/02-hall.png" alt="The hall panel"></td>
+<td width="50%"><img src="docs/images/03-room.png" alt="A room panel"></td>
+</tr>
+<tr>
+<td><em>By the door: what is locked, what is on, and one button to turn the shared rooms off
+on the way out.</em></td>
+<td><em>A room: climate, its history against outside, and what lives in it, pulled from the
+same inventory the assistant answers from.</em></td>
+</tr>
+</table>
 
 [Full write-up](docs/kiosk.md)
 
@@ -147,6 +171,14 @@ The house has real sensors in some rooms and none in others. Every reading that 
 placeholder is labelled **demo**, in the interface, permanently, until the hardware exists.
 The temptation to show a plausible number is strong and always wrong: a dashboard that lies
 once cannot be trusted again.
+
+---
+
+![Home and IoT](docs/images/06-house.png)
+
+*The floor plan is real geometry, drawn from a sketch on paper. Every room without a sensor is
+labelled demo, permanently, until the hardware exists. In this screenshot the demo mode has
+also replaced the room names and the outside location.*
 
 ---
 
